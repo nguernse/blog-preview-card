@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --color-yellow: hsl(47, 88%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray-500: hsl(0, 0%, 42%);
+  --color-gray-950: hsl(0, 0%, 7%);
+  --font-size-base: 16px;
+  --font-size-medium: 22px;
+  --font-weight-base: 500;
+  --font-weight-heavy: 800;
+  --border-radius-extra-small: 5px;
+  --border-radius-small: 10px;
+  --border-radius-base: 1rem;
+  --border-radius-medium: 26px;
+  --border-radius-large: 32px;
+  --spacing-base: 1rem; 
+  --spacing-medium: 26px;
+  --spacing-large: 32px;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-yellow);
+  font-family: "Figtree", sans-serif;
+  font-weight: var(--font-weight-base);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 22.5rem;
+  padding: var(--spacing-medium);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-950);
+  border-radius: var(--border-radius-medium);
+  box-shadow: 10px 10px 0px var(--color-gray-950);
+}
+
+.card-thumbnail {
+  border-radius: var(--border-radius-base);
+  height: 250px;
+  width: 100%;
+  margin-bottom: var(--spacing-base);
+}
+
+.card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-base);
+}
+
+.card-metadata {
+  margin-bottom: var(--spacing-base);
+}
+
+.card-metadata .tag {
+  margin-bottom: var(--spacing-base);
+}
+
+.tag {
+  color: var(--color-gray-950);
+  font-weight: var(--font-weight-heavy);
+  padding: 6px 12px;
+  display: inline-block;
+  background-color: var(--color-yellow);
+  border-radius: var(--border-radius-extra-small);
+}
+
+.card-header {
+  margin-bottom: var(--spacing-base);
+  font-size: var(--font-size-medium);
+}
+
+.card-header a {
+  font-weight: var(--font-weight-heavy);
+  color: var(--color-gray-950);
+  text-decoration: none;
+}
+
+.card-header a:hover {
+  color: var(--color-yellow);
+  cursor: pointer;
+}
+
+.card-body {
+  margin-bottom: var(--spacing-base);
+  color: var(--color-gray-500);
+  font-size: var(--font-size-base);
+  line-height: 150%;
+}
+
+.card-footer {
+  color: var(--color-gray-950);
+  font-weight: var(--font-weight-heavy);
+  display: flex;
+  align-items: center;
+}
+
+.card-footer .avatar {
+  margin-right: var(--spacing-base);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .card {
+    /* 425px */
+    max-width: 26.5rem;
+  }
+}
